@@ -172,3 +172,31 @@ Lucro  (+)──▶  Preço da ação  (+)──▶  Facilidade de emitir açõe
 * **Sinais** mostram se a variação é na **mesma** ( + ) ou **oposta** ( – ) direção.
 * **Loops de reforço (R)** ampliam perturbações; **loops de balanceamento (B)** procuram um equilíbrio.
 * **Atrasos** (⌛) são críticos: ignorar os atrasos dos loops B1 e B2 costuma levar aos erros observados nas simulações (expansão exagerada antes de contratar ou guerra de preços não antecipada).
+
+--- 
+
+### Revisão crítica — pontos cruciais que ainda mereciam entrar no seu “dossiê” da **People Express Microworld**
+
+Depois de reler o manual com foco nas lacunas, encontrei quatro áreas que complementam (ou refinam) as respostas anteriores:
+
+| Tema                                  | O que acrescentar / corrigir                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Evidência                            |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ |
+| **Recursos fundamentais**             | 1. **Cultura/ownership** dos empregados (todos proprietários + profit-sharing) é tratada no simulador como fonte de **baixa rotatividade e alta produtividade** – ela sustenta o “custo mínimo” que justifica tarifas de US\$ 0,09/ASM﻿.<br>2. **Aprendizado (learning curve)** dos CSMs é um recurso intangível que determina quão rápido a empresa aguenta crescer. Produtividade plena (1,5 mi RPM/pessoa/ano) só aparece após \~2 anos﻿.                                                                                               | turn1file10, turn1file15             |
+| **Loops causais adicionais**          | • **R4 – Marketing → Adopção inicial**: Marketing (+) → Clientes (+), que gera receita e possibilita manter/expandir marketing (até word-of-mouth assumir)﻿.<br>• **R5 – Curva de aprendizado dos CSMs**: Contratações (+) → Rookies (+) → Produtividade média (–) → Qualidade (–) → Clientes (–) → Pressão para contratar ainda mais (+) – se mal gerido vira ciclo vicioso.<br>• **B3 – Armadilha da dívida**: Dívida (+) → Juros (+) → Lucro líquido (–) → Preço da ação (–) → Menos caixa via equity (–) → Dependência de dívida (+)﻿. | turn1file16, turn1file15, turn1file2 |
+| **Erros de simulação não citados**    | • **“Contratar sem treinar”**: crescer >60 emp/trim sem folga de CSM experientes faz rookie-fraction > 0,45; a qualidade despenca antes mesmo de a carga de trabalho estourar.<br>• **“Marketing eterno”**: manter 15 % da receita em marketing por > 3 anos gera ROI decrescente e aperta o caixa – manual recomenda cair a 10 % quando o boca-a-boca estabiliza﻿.<br>• **“Escopo zig-zag”**: mudar o target scope de 0,6 → 0,9 → 0,6 confunde marca e impõe custos adicionais, pois alterações são irreversíveis no curto prazo﻿.        | turn1file12, turn1file3              |
+| **Reação da concorrência que faltou** | Além do corte de tarifas, as majors podem **copiar políticas de RH e pedir concessões salariais**, reduzindo seu breakeven em \~2 anos﻿. Uma forma de atenuar isso é **elevar gradualmente a qualidade (ex.: de 0,8 → 0,9)** enquanto mantém tarifa moderada – algo que elas não conseguem reproduzir rapidamente sem desmontar o serviço “full-frills”.                                                                                                                                                                                   | turn1file1                           |
+
+---
+
+#### Ajustes na “melhor estratégia”
+
+1. **Empregados/avião**: manter **55 ± 5** mas **priorizar lotar a “linha de produção” de treinadores experientes**; assim o rookie-fraction nunca ultrapassa 0,35, segurando a qualidade ≥ 0,8.
+2. **Marketing dinâmico**: 12 % (T0–T4) → 10 % (T5–T12) → 8 % (depois), liberando caixa p/ quitar dívida antes do ano 4.
+3. **Alavancagem**: simulação indica que **70 % dívida / 30 % equity** acelera expansão sem cair na armadilha de juros, desde que o serviço entre no “sweet spot” de lucratividade antes do juro composto dobrar a dívida (≈ ano 3).
+
+---
+
+#### Insight extra de aprendizado
+
+> **A sincronia entre *intensidade de marketing*, *taxa de contratação* e *crescimento de frota* é o “ponto de orquestração” do jogo.**
+> Se um desses três vetores estiver fora de fase em mais de 1–2 trimestres, algum loop de balanceamento (B1 – fadiga, B3 – dívida, ou saturação de marketing) domina e impede o ciclo de reforço desejado.
