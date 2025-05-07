@@ -86,4 +86,89 @@
 
 ---
 
-Caso algum ponto permaneça indefinido ou se queira detalhar resultados de outra execução, fico à disposição para aprofundar!
+### Diagramando os loops de maneira **mais clara e explícita**
+
+A seguir apresento cada loop com:
+
+* **Nome e tipo** (R = reforço, B = balanceamento)
+* **“Cadeia causa-efeito”** com **sinais**:
+
+  * **( + )** – a variável move‐se **na mesma direção** da anterior
+  * **( – )** – a variável move‐se **na direção oposta**
+* **Atraso** (⌛) quando o efeito não é imediato
+* **Comentário** resumindo a lógica do ciclo
+
+---
+
+#### **R1 – Crescimento de capacidade** (Reforço)
+
+```
+Capacidade de frota  (+)──▶  Passageiros transportados  (+)──▶  Receita  (+)
+      │                                                        │
+      └───────────────⌛ Lucro / Caixa  (+) ──▶ Compra de aviões (+)───┘
+```
+
+*⌛ ≈ 1–2 trimestres entre “Receita” → “Lucro/Caixa” → “Compra de aviões”*
+
+> **Comentário** – Quanto mais aviões, maior oferta; isso gera mais passageiros, receita e lucro que financiam novos aviões, acelerando o crescimento.
+
+---
+
+#### **R2 – Boca-a-boca dos clientes** (Reforço)
+
+```
+Passageiros atuais  (+)──▶  Reputação / Word-of-Mouth  (+)──▶  Novos clientes  (+)──▶ (volta)
+```
+
+*⌛ curto – clientes comentam logo após voar*
+
+> **Comentário** – A reputação cria um ciclo autopropulsor de demanda enquanto a qualidade se mantém.
+
+---
+
+#### **B1 – Efeito fadiga na força de trabalho** (Balanceamento)
+
+```
+Crescimento rápido de passageiros  (+)──▶  Carga de trabalho por empregado  (+)
+         │                                                │
+         │                                    (–)  Produtividade / Qualidade de serviço
+         │                                                │
+         └────────────────────────── (–)  Satisfação do cliente ──▶  Demanda
+```
+
+> **Comentário** – Sobrecarga gera queda de qualidade; isso reduz a satisfação e freia o crescimento — funciona como “freio natural” para expansão desordenada.
+
+---
+
+#### **B2 – Reação de preço da concorrência** (Balanceamento atrasado)
+
+```
+Market-share da PEx  (+)──▶  Perda de receita dos majors  (+)──▶  Pressão para baixar tarifas  (+)
+                                          ⌛ (8–12 trimestres)
+                                                │
+                                                └──▶  Tarifa dos majors  (–)   Atratividade relativa da PEx (–)  Market-share PEx
+```
+
+> **Comentário** – Por um tempo a PEx cresce sem oposição; depois os “majors” igualam preços, reduzindo a vantagem competitiva.
+
+---
+
+#### **R3 – Loop financeiro do valor da ação** (Reforço)
+
+```
+Lucro  (+)──▶  Preço da ação  (+)──▶  Facilidade de emitir ações  (+)──▶  Caixa disponível  (+)──▶  Redução de endividamento / Juros  (–)
+                                   │                                                          │
+                                   └──────────┬───────────────────────⌛───────────────────────┘
+                                              └───────►  Lucro  (+)  (volta)
+```
+
+> **Comentário** – Resultados melhores valorizam a empresa, barateando capital e retroalimentando os lucros.
+
+---
+
+### Como ler os diagramas
+
+* **Setas** indicam *direção causal* (“A influencia B”).
+* **Sinais** mostram se a variação é na **mesma** ( + ) ou **oposta** ( – ) direção.
+* **Loops de reforço (R)** ampliam perturbações; **loops de balanceamento (B)** procuram um equilíbrio.
+* **Atrasos** (⌛) são críticos: ignorar os atrasos dos loops B1 e B2 costuma levar aos erros observados nas simulações (expansão exagerada antes de contratar ou guerra de preços não antecipada).
